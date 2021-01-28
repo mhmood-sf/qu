@@ -1,0 +1,16 @@
+# Hexo stuff
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+.deploy*/
+
+# no need for this
+public/
+
+# hide some source dirs
+source/_drafts/
+source/favicon
+source/images
+

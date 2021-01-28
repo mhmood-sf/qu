@@ -1,0 +1,6 @@
+<p class="serif" style="color:#606060;">
+    Published: <%- page.date.format("MMM DD, YYYY").toString() %>
+    <br>
+    Tags: <%- tags.data.length ? tags.data.map(t => `<a class="colorless" href="${url_for(t.path)}">${t.name}</a>`).join(', ') : 'None'  %>
+</p>
+

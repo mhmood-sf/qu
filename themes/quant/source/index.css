@@ -1,0 +1,307 @@
+/* Code font - Source Code Pro Regular 400 */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+/***** HOME *****/
+/****************/
+body.home {
+    margin: 0 15%;
+    color: #303030;
+    background: #f2f2f2;
+    line-height: 1.4;
+}
+
+body.home > header {
+    margin-top: 5%;
+    margin-bottom: 5vh;
+}
+
+body.home > main {
+    margin-top: 30vh;
+}
+
+.home-nav {
+    font-size: 1.3rem;
+}
+
+.home-nav > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.home-nav > ul > li {
+    margin: 0 10px;
+}
+
+/***** PAGE *****/
+/****************/
+
+body.page {
+    color: #303030;
+    margin: 0 30%;
+    background: #f2f2f2;
+    line-height: 1.4;
+}
+
+body.page > footer {
+    margin-bottom: 5vh;
+}
+
+/***** POST *****/
+/****************/
+
+body.post {
+    color: #303030;
+    margin: 0 30%;
+    background: #f2f2f2;
+    line-height: 1.4;
+}
+
+body.post > footer {
+    margin-bottom: 5vh;
+}
+
+
+/***** GENERAL *****/
+/*******************/
+
+header {
+    cursor: default;
+}
+
+header > h1 {
+    font-weight: normal;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    padding-left: 5%;
+}
+
+ul > li > p {
+    margin: 5px auto;
+}
+
+blockquote {
+    margin: 10px 0;
+    padding: 7px 7px 7px 10px;
+    border-style: solid;
+    border-width: 1px 1px 1px 7px;
+    border-color: #aaa;
+}
+
+blockquote > p {
+    margin: 0;
+    padding: 0;
+}
+
+blockquote.info {
+    border-color: #aaa;
+    background-color: #e8e8e8;
+    border-radius: 0;
+    border-width: 0 0 0 7px;
+}
+
+blockquote.warning {
+    border-color: lightcoral;
+    border-radius: 0;
+    border-width: 0 0 0 7px;
+    background-color: #ffc2c7;
+}
+
+blockquote.success {
+    border-color: lightgreen;
+    border-radius: 0;
+    border-width: 0 0 0 7px;
+    background-color: #c4ffe3;
+}
+
+a {
+    color: #05B4FF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:visited {
+    color: #0085BD;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.colorless {
+    color: inherit;
+    font-weight: inherit;
+}
+
+a.colorless:visited {
+    color: inherit;
+}
+
+.serif {
+    font-family: Georgia, "Lucida Bright", Constantia, "Times New Roman", serif;
+}
+
+.sans-serif {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.anchor > svg {
+    height: 20px;
+    width: 20px;
+}
+
+.anchor:hover {
+    text-decoration: none;
+}
+
+/***** CODE *****/
+/****************/
+
+code {
+    background-color: #dedede;
+    color: indianred;
+    font-size: 0.9em;
+    font-family: "Source Code Pro", Consolas, "Lucida Console", monospace;
+    padding: 1px 3px;
+    border-radius: 3px;
+}
+
+figure {
+    width: 100%;
+    overflow-x: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    margin: auto;
+    background-color: #303030;
+    color: white;
+}
+
+pre {
+    padding: 0 0px;
+    margin: 5px;
+    font-family: "Source Code Pro", Consolas, "Lucida Console", monospace;
+    font-size: 0.9em;
+}
+
+/* line numbers */
+td.gutter {
+    color: gray;
+}
+
+/*** general ***/
+
+span.title {
+    color: lightcoral;
+}
+
+span.comment {
+    color: gray;
+}
+
+span.string {
+    color: lightgreen;
+}
+
+span.keyword {
+    color: skyblue;
+}
+
+span.number {
+    color: goldenrod;
+}
+
+span.built_in {
+    color: indianred;
+}
+
+span.meta {
+    color: thistle;
+}
+
+span.params {
+    color: lemonchiffon;
+}
+
+/*** HTML ***/
+
+span.name {
+    color: skyblue;
+}
+
+span.attr {
+    color: orange;
+}
+
+span.tag {
+    color: indianred;
+}
+
+/*** CSS ***/
+
+span.selector-id {
+    color: goldenrod;
+}
+
+span.selector-tag {
+    color: lightcoral;
+}
+
+span.selector-class {
+    color: lightgreen;
+}
+
+span.selector-pseudo {
+    color: yellow;
+}
+
+span.attribute {
+    color: skyblue;
+}
+
+/***** NOT FOUND *****/
+/*********************/
+.notfound {
+    color: #303030;
+}
+
+.notfound > main {
+    margin: 25vh 25%;
+}
+
+.notfound > main > h1 {
+    font-size: 5em;
+}
+
+/***** RESPONSIVE *****/
+/**********************/
+@media screen and (max-width: 768px) {
+    .home {
+        margin: 5%;
+    }
+
+    .page {
+        margin: 5%;
+    }
+
+    .post {
+        margin: 5%;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+

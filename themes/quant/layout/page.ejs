@@ -1,0 +1,23 @@
+<!-- GENERAL PAGE -->
+<body class="page">
+    <header class="serif">
+        <h1 class="slim">
+            <%- page.title %>
+            <%- partial("partials/permalink", { link: page.permalink }) %>
+        </h1>
+    </header>
+
+    <hr>
+
+    <main class="sans-serif">
+        <%- page.content %>
+    </main>
+
+    <hr>
+
+    <footer>
+        <%- partial('partials/site-footer') %>
+    </footer>
+
+</body>
+
