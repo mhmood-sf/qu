@@ -1,6 +1,6 @@
 <!-- TAGS LIST -->
 <body class="page">
-    <header class="serif">
+    <header>
         <h1>
             <%- page.title %>
         </h1>
@@ -8,7 +8,7 @@
 
     <hr>
 
-    <main class="sans-serif">
+    <main>
         <%- page.content %>
 
         <%- site.tags.length ? site.tags.data.map(t => `<a href="${url_for(t.path)}">${t.name}</a>`).join('<br>') : 'None'%>

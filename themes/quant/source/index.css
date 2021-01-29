@@ -1,6 +1,13 @@
 /* Code font - Source Code Pro Regular 400 */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
+/***** VARS *****/
+/****************/
+:root {
+    --serif: Georgia, "Lucida Bright", Constantia, "Times New Roman", serif;
+    --sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
 /***** HOME *****/
 /****************/
 body.home {
@@ -46,6 +53,19 @@ body.page {
     line-height: 1.4;
 }
 
+body.page > header {
+    font-family: var(--serif);
+    font-weight: normal;
+}
+
+body.page > main {
+    font-family: var(--serif);
+}
+
+body.page > main h1, h2, h3, h4, h5, h6 {
+    font-family: var(--sans-serif);
+}
+
 body.page > footer {
     margin-bottom: 5vh;
 }
@@ -58,6 +78,19 @@ body.post {
     margin: 0 30%;
     background: #f2f2f2;
     line-height: 1.4;
+}
+
+body.post > header {
+    font-family: var(--serif);
+    font-weight: normal;
+}
+
+body.post > main {
+    font-family: var(--serif);
+}
+
+body.post > main h1, h2, h3, h4, h5, h6 {
+    font-family: var(--sans-serif);
 }
 
 body.post > footer {
@@ -96,7 +129,7 @@ blockquote {
     border-color: #aaa;
 }
 
-blockquote > p {
+blockquote p {
     margin: 0;
     padding: 0;
 }
@@ -125,7 +158,6 @@ blockquote.success {
 a {
     color: #05B4FF;
     text-decoration: none;
-    font-weight: 600;
 }
 
 a:visited {
@@ -146,11 +178,11 @@ a.colorless:visited {
 }
 
 .serif {
-    font-family: Georgia, "Lucida Bright", Constantia, "Times New Roman", serif;
+    font-family: var(--serif);
 }
 
 .sans-serif {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: var(--sans-serif);
 }
 
 .text-center {

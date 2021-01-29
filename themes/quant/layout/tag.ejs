@@ -1,6 +1,6 @@
 <!-- TAG PAGE -->
 <body class="page">
-    <header class="serif">
+    <header> 
         <h1>
             tag: <%- page.tag %>
             <%- partial("partials/permalink", { link: page.permalink }) %>
@@ -9,7 +9,7 @@
 
     <hr>
 
-    <main class="sans-serif">
+    <main>
         <p>
             [<a href="<%- url_for('tags/index.html') %>">All tags</a>]
         </p>
