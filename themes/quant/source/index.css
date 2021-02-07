@@ -320,20 +320,17 @@ span.attribute {
 /***** RESPONSIVE *****/
 /**********************/
 @media screen and (max-width: 768px) {
-    .home {
+    body.home {
         margin: 5%;
     }
 
-    .page {
+    body.page {
         margin: 5%;
     }
 
-    .post {
+    body.post {
         margin: 5%;
     }
 
-    p {
-        font-size: 1em;
-    }
 }
 
