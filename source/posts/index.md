@@ -1,5 +1,0 @@
----
-title: posts
-layout: posts
----
-
