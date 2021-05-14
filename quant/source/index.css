@@ -63,7 +63,7 @@ body.page > main {
 }
 
 body.page > main h1, h2, h3, h4, h5, h6 {
-    font-family: var(--sans-serif);
+    font-family: var(--serif);
 }
 
 body.page > footer {
@@ -90,7 +90,7 @@ body.post > main {
 }
 
 body.post > main h1, h2, h3, h4, h5, h6 {
-    font-family: var(--sans-serif);
+    font-family: var(--serif);
 }
 
 body.post > footer {
@@ -331,6 +331,5 @@ span.attribute {
     body.post {
         margin: 5%;
     }
-
 }
 

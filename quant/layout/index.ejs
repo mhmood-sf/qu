@@ -2,7 +2,7 @@
 <body class="home">
     <header class="text-center sans-serif">
         <h1>
-        	<%= config.title %>
+            <%= config.title %>
         </h1>
 
         <hr>
@@ -16,9 +16,9 @@
         <nav class="home-nav">
             <ul>
                 <%- site.pages
-                		.filter(p => theme.main_menu.includes(p.title))
-                		.map(p => `<li><a class="colorless" href="${url_for(p.path)}">${p.title}</a></li>`)
-                		.join("\n")
+                        .filter(p => theme.main_menu.includes(p.title))
+                        .map(p => `<li><a class="colorless" href="${url_for(p.path)}">${p.title}</a></li>`)
+                        .join("\n")
                 %>
             </ul>
         </nav>

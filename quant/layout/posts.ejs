@@ -17,7 +17,7 @@
                 // This map is needed for some reason, otherwise sort doesn't work
                 .map(p => ({path: p.path, title: p.title, date: p.date}))
                 .sort((a, b) => b.date - a.date)
-                .map(p => [`<h3>${p.date.format("MMM YYYY").toString()}</h3>`, `<a href="${url_for(p.path)}">${p.title}</a><br>`])
+                .map(p => [`<h3 style="font-weight:normal">${p.date.format("MMM YYYY").toString()}</h3>`, `<a href="${url_for(p.path)}">${p.title}</a><br>`])
                 .map((c, i, arr) => {
                         if (i == 0) return c;
                         if (i == arr.length) return c;
