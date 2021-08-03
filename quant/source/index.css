@@ -6,6 +6,8 @@
 :root {
     --serif: Georgia, "Lucida Bright", Constantia, "Times New Roman", serif;
     --sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --fav-green: #9dffbe;
+    --fav-red: #ff3f69;
 }
 
 /***** HOME *****/
@@ -62,8 +64,15 @@ body.page > main {
     font-family: var(--serif);
 }
 
-body.page > main h1, h2, h3, h4, h5, h6 {
+body.page > main > h1,
+body.page > main > h2,
+body.page > main > h3,
+body.page > main > h4,
+body.page > main > h5,
+body.page > main > h6 {
     font-family: var(--serif);
+    font-weight: normal;
+    font-style: italic;
 }
 
 body.page > footer {
@@ -89,14 +98,20 @@ body.post > main {
     font-family: var(--serif);
 }
 
-body.post > main h1, h2, h3, h4, h5, h6 {
+body.post > main > h1,
+body.post > main > h2,
+body.post > main > h3,
+body.post > main > h4,
+body.post > main > h5,
+body.post > main > h6 {
     font-family: var(--serif);
+    font-weight: normal;
+    font-style: italic;
 }
 
 body.post > footer {
     margin-bottom: 5vh;
 }
-
 
 /***** GENERAL *****/
 /*******************/
@@ -305,15 +320,15 @@ span.attribute {
 
 /***** NOT FOUND *****/
 /*********************/
-.notfound {
+body.notfound {
     color: #303030;
 }
 
-.notfound > main {
+body.notfound > main {
     margin: 25vh 25%;
 }
 
-.notfound > main > h1 {
+body.notfound > main > h1 {
     font-size: 5em;
 }
 
