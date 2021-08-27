@@ -72,7 +72,6 @@ body.page > main > h5,
 body.page > main > h6 {
     font-family: var(--serif);
     font-weight: normal;
-    font-style: italic;
 }
 
 body.page > footer {
@@ -106,7 +105,6 @@ body.post > main > h5,
 body.post > main > h6 {
     font-family: var(--serif);
     font-weight: normal;
-    font-style: italic;
 }
 
 body.post > footer {
