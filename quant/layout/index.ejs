@@ -1,4 +1,4 @@
-<!-- ROOT/HOME -->
+<!-- HOMEPAGE -->
 <body class="home">
     <header class="text-center sans-serif">
         <h1>
@@ -16,7 +16,13 @@
         <nav class="home-nav">
             <ul>
                 <%- site.pages
+                        // filter main menu pages
                         .filter(p => theme.main_menu.includes(p.title))
+                        // get needed data (map also needed for running sort)
+                        .map(p => ({title: p.title, path: p.path}))
+                        // sort according theme config order
+                        .sort((a,b) => theme.main_menu.indexOf(a.title) - theme.main_menu.indexOf(b.title))
+                        // map to HTML
                         .map(p => `<li><a class="colorless" href="${url_for(p.path)}">${p.title}</a></li>`)
                         .join("\n")
                 %>
