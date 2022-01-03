@@ -2,7 +2,7 @@
 <body class="page">
     <header> 
         <h1>
-            tag: <%- page.tag %>
+            Tag: <%- page.tag %>
         </h1>
     </header>
 
@@ -17,7 +17,8 @@
             Posts tagged <code><%- page.tag %></code>:
         </h3>
 
-        <%- page.posts.filter(p => !p.draft && !p.unlisted)
+        <%- // we dont show drafts BUT we do show unlisted posts.
+            page.posts.filter(p => !p.draft)
                       .map(p => `<a href="${url_for(p.path)}">${p.title}</a>`)
                       .join('<br>')
         %>
@@ -28,6 +29,5 @@
     <footer>
         <%- partial('partials/site-footer') %>
     </footer>
-
 </body>
 
