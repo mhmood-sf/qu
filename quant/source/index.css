@@ -6,16 +6,27 @@
 :root {
     --serif: Georgia, "Lucida Bright", Constantia, "Times New Roman", serif;
     --sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --fav-green: #9dffbe;
-    --fav-red: #ff3f69;
+    --monospace: "Source Code Pro", Consolas, "Lucida Console", monospace;
+    --color-green: #9dffbe;
+    --color-red: #ff3f69;
+    --color-blue: #9effff;
+    --color-black: #303030;
+    --color-white: #fff6e3;
+    --color-grey: #aaaaaa;
+    --color-lightgrey: #e8e8e8;
+    --color-hyperlink-blue: #1c60ff;
+    --color-warning-border: lightcoral;
+    --color-warning-bg: #ffc2c7;
+    --color-success-border: lightgreen;
+    --color-success-bg: #c4ffe3;
 }
 
 /***** HOME *****/
 /****************/
 body.home {
     margin: 0 15%;
-    color: #303030;
-    background: #f2f2f2;
+    color: var(--color-black);
+    background: var(--color-white);
     line-height: 1.4;
 }
 
@@ -49,9 +60,9 @@ body.home > main {
 /****************/
 
 body.page {
-    color: #303030;
+    color: var(--color-black);
     margin: 0 30%;
-    background: #f2f2f2;
+    background: var(--color-white);
     line-height: 1.4;
 }
 
@@ -82,9 +93,9 @@ body.page > footer {
 /****************/
 
 body.post {
-    color: #303030;
+    color: var(--color-black);
     margin: 0 30%;
-    background: #f2f2f2;
+    background: var(--color-white);
     line-height: 1.4;
 }
 
@@ -139,7 +150,7 @@ blockquote {
     padding: 7px 7px 7px 10px;
     border-style: solid;
     border-width: 1px 1px 1px 7px;
-    border-color: #aaa;
+    border-color: var(--color-grey);
 }
 
 blockquote p {
@@ -148,33 +159,33 @@ blockquote p {
 }
 
 blockquote.info {
-    border-color: #aaa;
-    background-color: #e8e8e8;
+    border-color: var(--color-grey);
+    background-color: var(--color-lightgrey);
     border-radius: 0;
     border-width: 0 0 0 7px;
 }
 
 blockquote.warning {
-    border-color: lightcoral;
+    border-color: var(--color-warning-border);
+    background-color: var(--color-warning-bg);
     border-radius: 0;
     border-width: 0 0 0 7px;
-    background-color: #ffc2c7;
 }
 
 blockquote.success {
-    border-color: lightgreen;
+    border-color: var(--color-success-border);
+    background-color: var(--color-success-bg);
     border-radius: 0;
     border-width: 0 0 0 7px;
-    background-color: #c4ffe3;
 }
 
 a {
-    color: #05B4FF;
+    color: var(--color-hyperlink-blue);
     text-decoration: none;
 }
 
 a:visited {
-    color: #0085BD;
+    color: var(--color-hyperlink-blue);
 }
 
 a:hover {
@@ -215,10 +226,10 @@ a.colorless:visited {
 /****************/
 
 code {
-    background-color: #dedede;
+    background-color: var(--color-lightgrey);
     color: indianred;
     font-size: 0.9em;
-    font-family: "Source Code Pro", Consolas, "Lucida Console", monospace;
+    font-family: var(--monospace);
     padding: 1px 3px;
     border-radius: 3px;
 }
@@ -230,14 +241,14 @@ figure {
     border-width: 1px;
     border-radius: 5px;
     margin: auto;
-    background-color: #303030;
+    background-color: var(--color-black);
     color: white;
 }
 
 pre {
     padding: 0 0px;
     margin: 5px;
-    font-family: "Source Code Pro", Consolas, "Lucida Console", monospace;
+    font-family: var(--monospace);
     font-size: 0.9em;
 }
 
@@ -319,7 +330,7 @@ span.attribute {
 /***** NOT FOUND *****/
 /*********************/
 body.notfound {
-    color: #303030;
+    color: var(--color-black);
 }
 
 body.notfound > main {
