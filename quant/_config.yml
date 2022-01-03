@@ -1,6 +1,6 @@
 # Which site pages to show on the home page
 main_menu:
-  - "about"
-  - "blog"
-  - "misc"
+  - "About"
+  - "Blog"
+  - "Misc."
 
