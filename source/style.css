@@ -1,12 +1,18 @@
-/* Code font - Source Code Pro Regular 400 */
-@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+/* Primary serif font */
+@font-face {
+    font-family: "NewComputerModern10";
+    src: local("NewComputerModern10-Regular"),
+         local("NewCM10-Regular"),
+         url("/fonts/NewCM10-Regular.otf")
+         format("opentype");
+}
 
 /***** VARS *****/
 /****************/
 :root {
-    --serif: Georgia, "Lucida Bright", Constantia, "Times New Roman", serif;
+    --serif: "NewComputerModern10", "Palatino", "Book Antiqua", Cambria, "Lucida Bright", serif;
     --sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --monospace: "Cascadia Code", Consolas, "Lucida Console", monospace;
+    --monospace: "Cascadia Code", Consolas, Monaco, "Lucida Console", "Andale Mono", monospace;
     --color-green: #9dffbe;
     --color-red: #ff3f69;
     --color-blue: #9effff;
@@ -14,12 +20,14 @@
     --color-white: #fff6e3;
     --color-grey: #aaaaaa;
     --color-lightgrey: #e8e8e8;
+    --color-darkgrey: #525252;
     --color-hyperlink-blue: #1c60ff;
     --color-warning-border: lightcoral;
     --color-warning-bg: #ffc2c7;
     --color-success-border: lightgreen;
     --color-success-bg: #c4ffe3;
 }
+
 
 /***** HOME *****/
 /****************/
@@ -28,6 +36,7 @@ body.home {
     color: var(--color-black);
     background: var(--color-white);
     line-height: 1.4;
+    font-family: var(--serif);
 }
 
 body.home > header {
@@ -39,11 +48,11 @@ body.home > main {
     margin-top: 30vh;
 }
 
-.home-nav {
+body.home > main > nav {
     font-size: 1.3rem;
 }
 
-.home-nav > ul {
+body.home > main > nav > ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -52,85 +61,45 @@ body.home > main {
     justify-content: center;
 }
 
-.home-nav > ul > li {
+body.home > main > nav > ul > li {
     margin: 0 10px;
 }
 
+
 /***** PAGE *****/
 /****************/
-
 body.page {
     color: var(--color-black);
     margin: 0 30%;
     background: var(--color-white);
     line-height: 1.4;
-}
-
-body.page > header {
     font-family: var(--serif);
-    font-weight: normal;
-}
-
-body.page > main {
-    font-family: var(--serif);
-}
-
-body.page > main > h1,
-body.page > main > h2,
-body.page > main > h3,
-body.page > main > h4,
-body.page > main > h5,
-body.page > main > h6 {
-    font-family: var(--serif);
-    font-weight: normal;
 }
 
 body.page > footer {
     margin-bottom: 5vh;
 }
 
+
 /***** POST *****/
 /****************/
-
 body.post {
     color: var(--color-black);
     margin: 0 30%;
     background: var(--color-white);
     line-height: 1.4;
-}
-
-body.post > header {
     font-family: var(--serif);
-    font-weight: normal;
-}
-
-body.post > main {
-    font-family: var(--serif);
-}
-
-body.post > main > h1,
-body.post > main > h2,
-body.post > main > h3,
-body.post > main > h4,
-body.post > main > h5,
-body.post > main > h6 {
-    font-family: var(--serif);
-    font-weight: normal;
 }
 
 body.post > footer {
     margin-bottom: 5vh;
 }
 
+
 /***** GENERAL *****/
 /*******************/
-
 header {
     cursor: default;
-}
-
-header > h1 {
-    font-weight: normal;
 }
 
 img {
@@ -156,13 +125,6 @@ blockquote {
 blockquote p {
     margin: 0;
     padding: 0;
-}
-
-blockquote.info {
-    border-color: var(--color-grey);
-    background-color: var(--color-lightgrey);
-    border-radius: 0;
-    border-width: 0 0 0 7px;
 }
 
 blockquote.warning {
@@ -213,118 +175,108 @@ a.colorless:visited {
     text-align: center;
 }
 
-.anchor > svg {
-    height: 20px;
-    width: 20px;
-}
-
-.anchor:hover {
-    text-decoration: none;
-}
-
-/***** CODE *****/
-/****************/
-
+/*** Inline code ***/
 code {
     background-color: var(--color-lightgrey);
-    color: indianred;
+    color: var(--color-black);
     font-size: 0.9em;
     font-family: var(--monospace);
     padding: 1px 3px;
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
+/*** Codeblock ***/
 figure {
     width: 100%;
     overflow-x: auto;
     border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
+    border-width: 0;
+    border-radius: 3px;
     margin: auto;
-    background-color: var(--color-black);
-    color: white;
+    background-color: var(--color-lightgrey);
+    color: var(--color-black);
 }
 
+/*** Line number column ***/
 pre {
     padding: 0 0px;
     margin: 5px;
     font-family: var(--monospace);
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 /*** Line Numbers ***/
 td.gutter {
-    color: gray;
+    color: grey;
 }
 
 /*** General Syntax Highlighting ***/
-
 span.title {
-    color: lightcoral;
+    color: lightseagreen;
 }
 
 span.comment {
-    color: gray;
-}
-
-span.string {
-    color: lightgreen;
-}
-
-span.keyword {
-    color: skyblue;
-}
-
-span.number {
-    color: goldenrod;
-}
-
-span.built_in {
-    color: indianred;
-}
-
-span.meta {
-    color: thistle;
+    color: grey;
 }
 
 span.params {
-    color: lemonchiffon;
+    color: inherit;
+}
+
+span.string {
+    color: limegreen;
+}
+
+span.keyword {
+    color: royalblue;
+}
+
+span.number {
+    color: indianred;
+}
+
+span.built_in {
+    color: lightseagreen;
+}
+
+span.meta {
+    color: teal;
 }
 
 /*** HTML Syntax Highlighting ***/
 
 span.name {
-    color: skyblue;
+    color: royalblue;
 }
 
 span.attr {
-    color: orange;
+    color: lightseagreen;
 }
 
 span.tag {
-    color: indianred;
+    color: royalblue;
 }
 
 /*** CSS Syntax Highlighting ***/
 
 span.selector-id {
-    color: goldenrod;
+    color: royalblue;
 }
 
 span.selector-tag {
-    color: lightcoral;
+    color: royalblue;
 }
 
 span.selector-class {
-    color: lightgreen;
+    color: royalblue;
 }
 
 span.selector-pseudo {
-    color: yellow;
+    color: teal;
 }
 
 span.attribute {
-    color: skyblue;
+    color: lightseagreen;
 }
 
 /***** NOT FOUND *****/
@@ -343,17 +295,19 @@ body.notfound > main > h1 {
 
 /***** RESPONSIVE *****/
 /**********************/
-@media screen and (max-width: 768px) {
-    body.home {
-        margin: 5%;
-    }
-
-    body.page {
-        margin: 5%;
-    }
-
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    body.home,
+    body.page,
     body.post {
-        margin: 5%;
+        margin: 0 15%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body.home,
+    body.page,
+    body.post {
+        margin: 0 5%;
     }
 }
 
