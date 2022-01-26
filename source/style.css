@@ -98,6 +98,17 @@ body.post > footer {
 
 /***** GENERAL *****/
 /*******************/
+note {
+    margin: 0 -30% 0 0;
+    float: right;
+    clear: right;
+    width: 25%;
+    color: var(--color-darkgrey);
+    font-size: 0.9rem;
+    border-left: 2px solid rosybrown;
+    padding: 0 0 0 7px;
+}
+
 header {
     cursor: default;
 }
@@ -301,6 +312,16 @@ body.notfound > main > h1 {
     body.post {
         margin: 0 15%;
     }
+
+    note {
+        margin: 0 0 2% 0;
+        width: auto;
+        color: var(--color-darkgrey);
+        font-size: 0.9rem;
+        border-top: 2px solid rosybrown;
+        border-bottom: 2px solid rosybrown;
+        border-left: 0 solid transparent;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -308,6 +329,16 @@ body.notfound > main > h1 {
     body.page,
     body.post {
         margin: 0 5%;
+    }
+
+    note {
+        margin: 0 0 2% 0;
+        width: auto;
+        color: var(--color-darkgrey);
+        font-size: 0.9rem;
+        border-top: 2px solid rosybrown;
+        border-bottom: 2px solid rosybrown;
+        border-left: 0 solid transparent;
     }
 }
 
